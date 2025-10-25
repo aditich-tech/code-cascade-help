@@ -1,12 +1,20 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import FallingCodeBackground from '@/components/FallingCodeBackground';
+import FAQSection from '@/components/FAQSection';
+import CoddieChat from '@/components/CoddieChat';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="relative min-h-screen bg-background overflow-hidden">
+      {/* Falling code background */}
+      <FallingCodeBackground />
+      
+      {/* Main content */}
+      <div className="relative z-10 min-h-screen py-16 px-4">
+        <FAQSection />
       </div>
+
+      {/* Chatbot widget */}
+      <CoddieChat />
     </div>
   );
 };
